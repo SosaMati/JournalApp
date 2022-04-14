@@ -1,10 +1,7 @@
 import { Navigate } from "react-router-dom";
-import { useSelector } from 'react-redux';
 
-export const PublicRoute = ({ children }) => {
+export const PublicRoute = ({ isAuth, children }) => {
 
-    const { auth } = useSelector((state) => state);
-
-    return auth.uid ? <Navigate to="/" /> : children;
+    return isAuth ? <Navigate to="/" /> : children;
 };
 

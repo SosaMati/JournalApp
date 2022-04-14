@@ -47,17 +47,17 @@ export const AppRouter = () => {
 
 
     return (  
-        <BrowserRouter basename={process.env.PUBLIC_URL} >
+        <BrowserRouter>
             <Routes>
                 <Route path="/auth/*" element={ 
-                    <PublicRoute>
+                    <PublicRoute isAuth={isLoggedIn}>
                         <AuthRouter />
                     </PublicRoute>
                 } 
                 />
 
                 <Route path="/" element={ 
-                    <PrivateRoute>
+                    <PrivateRoute isAuth={isLoggedIn}>
                         <JournalScreen />
                     </PrivateRoute>
                 } 
