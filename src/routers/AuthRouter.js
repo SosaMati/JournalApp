@@ -9,10 +9,10 @@ export const AuthRouter = () => {
         <div className="auth__main">
             <div className="auth__box-container animate__animated animate__fadeInUp">
                 <Routes>
-                    <Route path="login" element={ <LoginScreen /> } />
-                    <Route path="register" element={ <RegisterScreen /> } />
+                    <Route path="/login" element={ <LoginScreen /> } />
+                    <Route path="/register" element={ <RegisterScreen /> } />
 
-                    <Route path="*" element={ <Navigate replace to="login" /> } />
+                    <Route path="/*" element={ <Navigate replace to="login" /> } />
                 </Routes>
             </div>
         </div>
