@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import { firebase } from '../firebase/firebase-config';
@@ -14,7 +14,6 @@ import { startLoadingNotes } from "../actions/notes";
 
 export const AppRouter = () => {
     
-
     const dispatch = useDispatch();
 
     const [ checking, setChecking ] = useState(true); //para que no se renderice la pantalla de carga antes de que se haya autenticado
@@ -47,9 +46,8 @@ export const AppRouter = () => {
     }
 
 
-
-    return (
-        <>
+    return (  
+        <BrowserRouter>
             <Routes>
                 <Route path="/auth/*" element={ 
                     <PublicRoute>
@@ -65,7 +63,12 @@ export const AppRouter = () => {
                 } 
                 />
 
+                <Route path="*" element={
+                    <Navigate replace to="/auth/" />
+                } 
+                />
+
             </Routes>
-        </>
+        </BrowserRouter>
     );
 }
