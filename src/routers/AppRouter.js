@@ -63,7 +63,7 @@ export const AppRouter = () => {
                 } 
                 />
 
-                <Route path="*" element={
+                <Route path="/*" element={
                     <Navigate replace to="/auth/" />
                 } 
                 />
