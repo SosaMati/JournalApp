@@ -47,7 +47,7 @@ export const AppRouter = () => {
 
 
     return (  
-        <BrowserRouter basename="/">
+        <BrowserRouter basename="/index.html">
             <Routes>
                 <Route path="/auth/*" element={ 
                     <PublicRoute isAuth={isLoggedIn}>
