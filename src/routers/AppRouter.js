@@ -53,19 +53,19 @@ export const AppRouter = () => {
                     <PublicRoute isAuth={isLoggedIn}>
                         <AuthRouter />
                     </PublicRoute>
-                } 
+                    } 
                 />
 
                 <Route path="/journal" element={ 
                     <PrivateRoute isAuth={isLoggedIn}>
                         <JournalScreen />
                     </PrivateRoute>
-                } 
+                    } 
                 />
 
                 <Route path="/*" element={
-                    <Navigate replace to="/auth/" />
-                } 
+                    <Navigate replace to="/auth/login" />
+                    } 
                 />
 
             </Routes>
