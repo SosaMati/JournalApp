@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
 import { firebase } from '../firebase/firebase-config';
@@ -47,7 +47,7 @@ export const AppRouter = () => {
 
 
     return (  
-        <BrowserRouter basename="/index.html">
+        <HashRouter basename="/index.html">
             <Routes>
                 <Route path="/auth/*" element={ 
                     <PublicRoute isAuth={isLoggedIn}>
@@ -69,6 +69,6 @@ export const AppRouter = () => {
                 />
 
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     );
 }
