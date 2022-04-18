@@ -56,7 +56,7 @@ export const AppRouter = () => {
                     } 
                 />
 
-                <Route path="/journal" element={ 
+                <Route path="/" element={ 
                     <PrivateRoute isAuth={isLoggedIn}>
                         <JournalScreen />
                     </PrivateRoute>
