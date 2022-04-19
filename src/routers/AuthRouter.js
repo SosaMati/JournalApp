@@ -1,12 +1,14 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
 import { LoginScreen } from "../components/auth/LoginScreen";
+import { LogoScreen } from "../components/auth/LogoScreen";
 import { RegisterScreen } from "../components/auth/RegisterScreen";
 
 
 export const AuthRouter = () => {
     return (
         <div className="auth__main">
+            <LogoScreen/>
             <div className="auth__box-container animate__animated animate__fadeInUp">
                 <Routes>
                     <Route path="/login" element={ <LoginScreen /> } />

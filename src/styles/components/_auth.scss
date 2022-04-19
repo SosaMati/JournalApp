@@ -10,7 +10,21 @@
     margin: 0;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
     
+}
+
+.auth__logo {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 140px ;
+}
+
+.auth__logo h1{
+    color: white;
+    font-family: 'Square Peg', cursive;
+    font-size: 80px;
 }
 
 .auth__box-container {
