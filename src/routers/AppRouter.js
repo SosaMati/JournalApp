@@ -11,6 +11,7 @@ import { login } from "../actions/auth";
 import { PublicRoute } from "./PublicRoute";
 import { PrivateRoute } from "./PrivateRoute";
 import { startLoadingNotes } from "../actions/notes";
+import loading from '../assets/pngwing.com.png';
 
 
 export const AppRouter = () => {
@@ -42,7 +43,9 @@ export const AppRouter = () => {
 
     if (checking) { //si se esta autenticando
         return (
-            <h1>Wait...</h1>
+            <div className="loading__logo">
+                <img   src= { loading } alt= "Loading..." />
+            </div>
         ) //no se renderiza nada
     }
 
