@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 
 import { firebase } from '../firebase/firebase-config';
 
+
 import { JournalScreen } from "../components/journal/JournalScreen";
 import { AuthRouter } from "./AuthRouter";
 import { login } from "../actions/auth";
