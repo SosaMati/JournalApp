@@ -78,13 +78,16 @@
 }
 
 .journal__entry-picture {
-    width: 100%;
+    width: 25%;
+    height: 80px;
     margin: 2px;
     border-radius: 4px;
 }
 
 .journal__entry-body {
+    height: 60px;
     padding: 10px;
+    width: 50%;
 }
 .journal__entry-title {
     font-size: 14px;
