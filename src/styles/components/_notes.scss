@@ -48,7 +48,12 @@
 }
 
 .notes__image img {
-    box-shadow: 2px 2px $dark-grey;
-    border-radius: 10px;
-    height: 150px;
+    box-shadow: 2px 2px rgb(201, 197, 197);
+    border-radius: 5px;
+    height: 200px;
+
+    &:hover {
+        transform: scale(2);
+    }
 }
+
